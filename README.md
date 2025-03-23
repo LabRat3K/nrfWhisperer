@@ -6,7 +6,7 @@ The nRFWhisperer was designed to provide sanity tests for nRF24L01 modules, and 
 
 <img src="pcb/nRF_Whisperer_v1.png">
 
-[<img src="pcb/photo.jpg">]
+<img src="pcb/photo.jpg">
 
 ## License
 
