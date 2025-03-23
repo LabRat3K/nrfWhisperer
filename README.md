@@ -11,7 +11,10 @@ The nRFWhisperer was designed to provide sanity tests for nRF24L01 modules, and 
 
 ## Dependencies
 
-This project makes use of the [LRL_KEY](https://github.com/LabRat3K/LRL_Key) library for integrating the keypad.
+This project makes use of the following libraries:
+ - [LRL_KEY](https://github.com/LabRat3K/LRL_Key) library for integrating the keypad.
+ - [RF24](https://nrf24.github.io/RF24/) library for interfacing with the nRF24L01 (can be downloaded using the Arduino library manager)
+
 
 ## License
 
