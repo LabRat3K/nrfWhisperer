@@ -13,6 +13,7 @@
 
 #include <Wire.h>
 
+#define LED_TEST
 // For unknown reasons, typedef structures must come from external .h file
 #include "lcd_menu.h"
 #include "rf_debug.h"
@@ -263,6 +264,7 @@ void setup() {
   configRadio();
   radio.startListening(); // Note  ENRXADDR_P0 = 0
   delay(1000);
+  Serial.println("nRFWhisperer Serial Console");
 }
 
 // Ugly Debug Code
@@ -912,6 +914,7 @@ void tx_test (int key) {
   lcd.setCursor(0,1);
 
   while (inch != KEY_SELECT) {
+     inch = getkey();
      if (millis() - timestamp > 1000) {
         timestamp = millis();
 
@@ -1162,16 +1165,16 @@ int keypad_test (int  key) {
     lcd.print("PRESSED KEY: \x5B \x5D");
     while (inch != KEY_SELECT) {
        inch = getkey();
-       Serial.print("GETKEY returned: ");
-       Serial.println(inch);
+       //Serial.print("GETKEY returned: ");
+       //Serial.println(inch);
        lcd.setCursor(14,1);
        switch (inch) {
-          case KEY_NONE:   lcd.write(" ");   break;
-          case KEY_LEFT:   lcd.write("\x7F");break;
-          case KEY_RIGHT:  lcd.write("\x7E");break;
-          case KEY_UP:     lcd.write("^");   break;
-          case KEY_DOWN:   lcd.write("v");   break;
-          case KEY_SELECT: lcd.write("$");   break;
+          case KEY_NONE:   lcd.write(" ");   Serial.println("None");break;
+          case KEY_LEFT:   lcd.write("\x7F");Serial.println("LEFT");break;
+          case KEY_RIGHT:  lcd.write("\x7E");Serial.println("RIGHT");break;
+          case KEY_UP:     lcd.write("^");   Serial.println("UP");  break;
+          case KEY_DOWN:   lcd.write("v");   Serial.println("DOWN"); break;
+          case KEY_SELECT: lcd.write("$");   Serial.println("SELECT");break;
        }
     }
     return error;
@@ -1458,10 +1461,11 @@ int runMenu(tMenuItem *menu, uint8_t menu_size, uint8_t startIndex, uint8_t star
            sub_index = (sub_index+1)%menuSize;
            break;
         case KEY_NONE:
-        default: break;
+        default: continue;
       }
       lcd.setCursor(0,0);
       lcd.print(menu[current].title);
+      Serial.println(menu[current].title);
       lcd.setCursor(1,1);
       clearLine();
 
