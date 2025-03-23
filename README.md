@@ -4,7 +4,7 @@ nRFWhisperer: an arduino shield
 This is a custom arduino shield, that integrates a common LCD & Keypad design, with a SPI interface to a nRF24L01 radio module. 
 The nRFWhisperer was designed to provide sanity tests for nRF24L01 modules, and interacts with WNRF E1.31 gateway device.  The nRFWhisper can also operate as a serial interface for the PIC wireless bootloader.  [nRFLoader](https://github.com/LabRat3K/nRFLoader/blob/main/Documentation/nRFLoader.pdf) 
 
-[<img src="pcb/nRF_Whisperer_v1.png">]
+<img src="pcb/nRF_Whisperer_v1.png">
 
 ## License
 
