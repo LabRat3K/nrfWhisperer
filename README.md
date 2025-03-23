@@ -6,6 +6,8 @@ The nRFWhisperer was designed to provide sanity tests for nRF24L01 modules, and 
 
 [<img src="pcb/nRF_Whisperer_v1.png">]
 
+[<img src="pcb/photo.jpg">]
+
 ## License
 
 The contents of this repository, including the pcb schematic, and the sample code, is released under a [3-clause BSD license](LICENSE). If you use this project, for commercial or non-commercial use, linking to this GitHub page is strongly recommended. 
