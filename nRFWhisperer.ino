@@ -1,7 +1,7 @@
 // nRFLoader - a sketch for testing nRF24 modules, and to enable
 // OTA upgrade of devices running the nRFLoader bootloader
 //
-// (c) 2022, Andrew Williams
+// (c) 2022-2025, Andrew Williams
 // -------------------------
 // Hardware Setup - Uses and LCDKEYPAD with a 2x16 LCD
 // and an ESP24L01 Radio connected to SPI and pins 3&2
